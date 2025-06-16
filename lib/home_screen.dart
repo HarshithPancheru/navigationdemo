@@ -39,10 +39,29 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(title: Center(child: Text(titles[currentIndex])), actions: [IconButton(onPressed: (){}, icon: Icon(Icons.logout))],),
       body: pages[currentIndex],
-      
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(child: Text("Menu")),
+            ListTile(
+              title:  Text("First"),
+            ),
+            ListTile(
+              title:  Text("Second"),
+            ),
+            ListTile(
+              title:  Text("Third"),
+            ),
+            ListTile(
+              title:  Text("Fourth"),
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: onTap,
+        backgroundColor: Colors.pink[700],
         items: [
           // BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.amber,), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.two_k_rounded, color: Colors.amber), label: "Second"),
