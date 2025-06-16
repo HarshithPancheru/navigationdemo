@@ -13,7 +13,7 @@ class _MyWidgetState extends State<SplashScreen> {
 @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 5), (){
+    Future.delayed(Duration(seconds: 1), (){
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> HomeScreen()));
 
     });
